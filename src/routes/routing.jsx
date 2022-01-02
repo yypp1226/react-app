@@ -10,11 +10,17 @@ import PopoverComponent from '../views/ui-components/popover.jsx';
 import TooltipComponent from '../views/ui-components/tooltip.jsx';
 
 var ThemeRoutes = [
+  {
+    path: '/addSchedule',
+    name: 'Addschedule',
+    component: Starter
+  }
+    ,
   { 
     path: '/dashboard', 
     name: 'Dashboard', 
     icon: 'ti-loop', 
-    component: Starter 
+    component: Starter
   },
   {
     path: '/alert',

@@ -1,9 +1,11 @@
-import Calendar from './calendar/calendar';
-import Projects from './projects/projects';
+import CalendarOutput from './calendarOutput/calendarOutput';
+import AddSchedule from './calendarOutput/addSchedule';
+// import Projects from './projects/projects';
 import Feeds from './feeds/feeds';
 
 export {
-    Calendar,
-    Projects,
+    CalendarOutput,
+    AddSchedule,
+    //Projects,
     Feeds
 };

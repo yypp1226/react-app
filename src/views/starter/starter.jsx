@@ -10,27 +10,36 @@ import {
     Row,
     Col
 } from 'reactstrap';
-import { Calendar, Projects, Feeds } from 'components/dashboard-components';
+// import { CalendarOutput, Projects, Feeds } from 'components/dashboard-components';
+import { CalendarOutput, AddSchedule, Feeds } from 'components/dashboard-components';
 
 import img1 from '../../assets/images/big/img1.jpg';
 import img2 from '../../assets/images/big/img2.jpg';
 import img3 from '../../assets/images/big/img3.jpg';
 
-const Starter = () => {
+function ifAddSch(pathName) {
+    if(pathName === '/addSchedule'){
+        return <AddSchedule />
+    } else {
+        return <CalendarOutput />
+    }
+}
+
+const Starter = ({location}) => {
     return (
         <div>
             <Row>
                 <Col sm={6} lg={8}>
-                    <Calendar />
+                    {ifAddSch(location.pathname)}
                 </Col>
                 <Col sm={6} lg={4}>
                     <Feeds />
                 </Col>
             </Row>
             <Row>
-                <Col sm={12}>
+                {/* <Col sm={12}>
                     <Projects />
-                </Col>
+                </Col> */}
             </Row>
             <Row>
                 <Col xs="12" md="4">
